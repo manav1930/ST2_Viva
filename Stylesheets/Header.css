@@ -1,0 +1,45 @@
+/*Logo Header*/
+    /*Background*/
+#blank{
+    height: 125px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    /*Logo*/
+#blank img{
+    height: 100%;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+    /*Search Bar*/
+#search{
+    display: flex;
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 18px;
+    margin-right: 100px;
+}
+
+#search input{
+    box-shadow: 0px 0px 1px 1px #e5e5e5;
+    border: thin solid #e5e5e5;
+    height: 40px;
+    width: 250px;
+}
+
+#search button{
+    height: 40px;
+    width: 50px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 0px 1px 1px #e5e5e5;
+    border: thin solid #e5e5e5;
+}
+
+#search button:hover{
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}

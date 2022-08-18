@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Contact Us</title>
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="Stylesheets/Main.css">
+    <link rel="stylesheet" href="Stylesheets/Contact.css">
+
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src = "Scripts/FAQ.js" type = "text/javascript"></script>
+
+</head>
+<script>
+/**
+ * Helper function for POSTing data as JSON with fetch.
+ *
+ * @param {Object} options
+ * @param {string} options.url - URL to POST data to
+ * @param {FormData} options.formData - `FormData` instance
+ * @return {Object} - Response body from URL that was POSTed to
+ */
+ async function postFormDataAsJson({ url, formData }) {
+	const plainFormData = Object.fromEntries(formData.entries());
+	const formDataJsonString = JSON.stringify(plainFormData);
+
+	const fetchOptions = {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json",
+		},
+		body: formDataJsonString,
+	};
+
+	const response = await fetch(url, fetchOptions);
+
+	if (!response.ok) {
+		const errorMessage = await response.text();
+		throw new Error(errorMessage);
+	}
+
+	return response.json();
+}
+
+/**
+ * Event handler for a form submit event.
+ *
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+ *
+ * @param {SubmitEvent} event
+ */
+async function handleFormSubmit(event) {
+	event.preventDefault();
+
+	const form = event.currentTarget;
+	const url = form.action;
+
+	try {
+		const formData = new FormData(form);
+		const responseData = await postFormDataAsJson({ url, formData });
+
+		console.log({ responseData });
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+const exampleForm = document.getElementById("example-form");
+exampleForm.addEventListener("submit", handleFormSubmit);
+
+
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.json());
+
+app.post("/user", (request, response) => {
+
+	/**
+	 * In a real application, the data in `request.body` should
+	 * be validated before its used for anything e.g. inserting
+	 * into a database.
+	 */
+
+	const newUser = {
+		first_name: request.body.first_name,
+		last_name: request.body.last_name
+	};
+
+	response.status(201).json(newUser);
+});
+</script>
+
+<!-- Body -->
+<body>
+    <!-- Top Nav Bar -->
+    <header>
+        <div class="topnav">
+            <a href="Project 2.0.html" class="active">Home</a>
+            <a href="Privacy Policy.html">About</a>
+            <a href="Contact.html">Contact</a>
+
+<br><br>
+<h1>Contact Us</h1>
+
+               
+            </form>
+        </div>
+
+      <br>
+
+       
+    <!-- Footer -->
+    <div id="footmain">
+        <p>	&#169 2021 All Rights Reserved</p>
+    </div>
+
+    <!-- Alert on Form Submission -->
+    <script>
+        function myFunction(){
+            alert("Submitted Successfully! You shall hear from us within 24 hrs.");
+        }
+    </script>
+
+</body>
+</html>
