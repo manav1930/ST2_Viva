@@ -1,0 +1,205 @@
+/*Category Section*/
+    /*Category Heading*/
+.whitemain{
+    background-color: white;
+}
+.whitehead{
+    display: flex;
+    align-items: center; 
+    width: 100%; 
+    justify-content: center;
+}
+
+.line{
+    height: 1.5px;
+    width: 25%;
+    opacity: 0.5;
+    background-color: grey;
+}
+
+    /*Category Images*/
+.categoryimg{
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.categoryimg:hover{
+    box-shadow: 0px 0px 10px grey;
+}
+
+#categoryholder{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#categoryholder a{
+    text-decoration: none;
+}
+
+#categoryholder h2{
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Latest Auctions*/
+    /*Main div*/
+.greymain{
+    width: 100%;
+    background-color: lightgrey;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+    /*Heading*/
+.greyhead{
+    display: flex;
+    align-items: center; 
+    width: 100%; 
+    justify-content: center;
+}
+
+    /*Car Cards*/
+.carcard{
+    width: 300px;
+    box-shadow: 0px 0px 2px 0.5px grey;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+    /*Card Info*/
+.carcardinfo{
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
+
+    /*Bid Box*/
+.bid{
+    width: 75%;
+    height: 35px;
+    border: 1px solid lightgrey;
+    background-color: rgb(245, 245, 245);
+    color: rgb(75, 75, 75);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.bid label{
+    cursor: pointer;
+}
+
+.bid:hover{
+    color: black;
+}
+
+#cardcontainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*Top Brands*/
+    /*Brand Images*/
+#brandholder{
+    display: flex;
+    justify-content: center;
+}
+
+#brandholder a{
+    text-decoration: none;
+}
+
+#brandholder a p{
+    font-weight: normal;
+    color: grey;
+    margin-top: 0%;
+}
+
+#brandholder a p:hover{
+    color: #008C95;
+}
+
+.brandname{
+    margin: 10px;
+}
+
+.brandname:hover{
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.5);
+}
+
+.brandimg{
+    margin-top: 15px;
+}
+
+/*Why Choose Us?*/
+    /*Us Info*/
+#uscontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usinfo{
+    width: 400px;
+    height: 215px;
+    background-color: lightgrey;
+    margin-top: 25px;
+}
+
+.usinfo p{
+    margin-top: 50px;
+    width: 90%;
+    font-size: 17px;
+}
+
+    /*Vertical Line*/
+.vline{
+    height: 215px;
+    width: 2px;
+    opacity: 0.5;
+    background-color: grey;
+    margin: 25px;
+}
+
+    /*Buttons*/
+#usbtns{
+    display: flex;
+    justify-content: center;
+}
+
+#usbtns button{
+    width: 35%;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#learn{
+    margin-right: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #008C95;
+    border: 2px solid #008C95;
+}
+
+#contact{
+    margin-left: 8px;
+    background-color: #008C95;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+#learn:hover{
+    box-shadow: 0px 0px 2.5px #017d86;
+}
+
+#contact:hover{
+    box-shadow: 0px 0px 2.5px rgb(95, 95, 95);
+}
